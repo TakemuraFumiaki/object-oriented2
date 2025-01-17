@@ -29,14 +29,6 @@ public class MedalFactory {
             }
             bronze.setPrice(material.getCost()+(total/a)*12/10);
             return bronze;
-        }else if(material.getName().equals("プラチナ")){
-            Medal pratina = new Medal();
-            pratina.setName("プラチナメダル");
-            for(Employee emp : employees){
-                total+=emp.getSalary();
-            }
-            pratina.setPrice(material.getCost()+(total/a)*12/10);
-            return pratina;
         }else{
             Medal wood = new Medal();
             wood.setName("不良品");

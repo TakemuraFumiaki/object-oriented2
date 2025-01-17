@@ -17,18 +17,21 @@ public class Main {
         int a = materials.length;
 
         MedalFactory medalFactory =  new MedalFactory();
+        NemMedalFactory nm = new NemMedalFactory();
 
         Medal kin = medalFactory.makeMedal(a,materials[0],employees);
         Medal gin = medalFactory.makeMedal(a,materials[1],employees);
         Medal dou = medalFactory.makeMedal(a,materials[2],employees);
         Medal ki = medalFactory.makeMedal(a,materials[3],employees);
-        Medal pra = medalFactory.makeMedal(a,materials[4],employees);
+        Medal pra = nm.makeMedal(a,materials[4],employees);
 
         System.out.println("製品名 :"+kin.getName()+" /価格："+ kin.getPrice()+"円");
         System.out.println("製品名 :"+gin.getName()+" /価格："+ gin.getPrice()+"円");
         System.out.println("製品名 :"+dou.getName()+" /価格："+ dou.getPrice()+"円");
         System.out.println("製品名 :"+ki.getName()+" /価格："+ ki.getPrice()+"円");
         System.out.println("製品名 :"+pra.getName()+" /価格："+ pra.getPrice()+"円");
+
+        
       
     }
 }
